@@ -6,40 +6,31 @@
           <h2>RSVP</h2>
         </div>
         <div class="section-container-spacer">
-          <div class="template-example">
-            <h2 class="template-title-example">Josh</h2>
+          <%= form_tag('/guests/rsvp', method: :post) do%>
+            <% @guests.each_with_index do |guest, i| %>
+              <%= hidden_field_tag("guest[id][]", i)%>
+              <div class="template-example">
+                <h2 class="template-title-example"><%= guest %></h2>
+                <div class="form-group">
+                  <%= radio_button_tag("guest[attendance][#{i}]", true, false, required: true)%>
+                  <label> Attending</label>
+                </div>
+                <div class="form-group">
+                  <%= radio_button_tag("guest[attendance][#{i}]", false)%>
+                  <label> Regrets</label>
+                </div>
+                <div class="form-group">
+                  <label>Any Dietary Restrictions?</label>
+                  <%= text_field_tag "guest[diet][]", nil, placeholder: 'Dietary Restrictions', class: 'form-control' %>
+                </div>
+              </div>
+            <% end %>
             <div class="form-group">
-              <input type="radio" id="attending" value="option1" name="attendance">
-              <label for="attending"> Attending</label>
+              <h4>Any additional Notes or Comments?</h4>
+              <%= text_area_tag 'guest[group_notes]', 'Notes or Comments', class: 'form-control'%>
             </div>
-            <div class="form-group">
-              <input type="radio" id="regrets" value="option2" name="attendance">
-              <label for="regrets"> Regrets</label>
-            </div>
-
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Any Dietary Restrictions?</label>
-              <input type="text" class="form-control" id="dietary-restrictions" placeholder="Dietary Restrictions">
-            </div>
-          </div>
-          <div class="template-example">
-            <h2 class="template-title-example">Josh</h2>
-            <div class="form-group">
-              <input type="radio" id="attending" value="option1" name="attendance">
-              <label for="attending"> Attending</label>
-            </div>
-            <div class="form-group">
-              <input type="radio" id="regrets" value="option2" name="attendance">
-              <label for="regrets"> Regrets</label>
-            </div>
-
-
-            <div class="form-group">
-              <label for="exampleInputEmail1">Any Dietary Restrictions?</label>
-              <input type="text" class="form-control" id="dietary-restrictions" placeholder="Dietary Restrictions">
-            </div>
-          </div>
+            <%= submit_tag 'Submit', class: 'btn btn-primary btn-lg' %>
+          <% end %>
         </div>
       </div>
     </div>

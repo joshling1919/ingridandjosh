@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'rsvp', to: 'rsvp#show'
   resources :guests, only: [] do
     get :search, on: :collection
+    post :rsvp, on: :collection
   end
 end
