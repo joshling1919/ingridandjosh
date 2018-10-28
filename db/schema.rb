@@ -10,9 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20181028232720) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "groups", force: :cascade do |t|
+    t.text     "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string   "fullname",             null: false
+    t.boolean  "attending"
+    t.string   "dietary_restrictions"
+    t.integer  "group_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+    t.index ["fullname"], name: "index_guests_on_fullname", using: :btree
+    t.index ["group_id"], name: "index_guests_on_group_id", using: :btree
+  end
 
 end
