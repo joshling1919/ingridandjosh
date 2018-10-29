@@ -11,4 +11,10 @@
   <body>
     <%= yield %>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function (event) {
+      navbarToggleSidebar();
+      navActivePage();
+    });
+  </script>
 </html>

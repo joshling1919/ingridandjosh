@@ -1,9 +1,14 @@
 class GuestsController < ApplicationController
   def search
     guest = Guest.find_by("fullname ILIKE ?", guest_params[:name])
-    group = guest.group
-    @guests = group.guests
-    # @todo: add error handling logic for incorrect search
+    if guest
+      group = guest.group
+      @guests = group.guests
+      render :search
+    else
+      @error = true
+      render 'rsvp/show'
+    end
   end
 
   def rsvp

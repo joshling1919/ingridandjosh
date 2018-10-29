@@ -12,16 +12,16 @@
               <div class="template-example">
                 <h2 class="template-title-example"><%= guest.fullname %></h2>
                 <div class="form-group">
-                  <%= radio_button_tag("guest[attendance][#{i}]", true, false, required: true)%>
-                  <label> Attending</label>
+                  <%= radio_button_tag("guest[attendance][#{guest.id}]", true, false, required: true, id: "guest_attendance_true_#{guest.id}")%>
+                  <label class="radio-label" for=<%= "guest_attendance_true_#{guest.id}" %>> Attending</label>
                 </div>
                 <div class="form-group">
-                  <%= radio_button_tag("guest[attendance][#{i}]", false)%>
-                  <label> Regrets</label>
+                  <%= radio_button_tag("guest[attendance][#{guest.id}]", false, false, required: true, id: "guest_attendance_false_#{guest.id}")%>
+                  <label class="radio-label" for=<%= "guest_attendance_false_#{guest.id}" %>> Regrets</label>
                 </div>
                 <div class="form-group">
                   <label>Any Dietary Restrictions?</label>
-                  <%= text_field_tag "guest[diet][]", nil, placeholder: 'Dietary Restrictions', class: 'form-control' %>
+                  <%= text_field_tag "guest[diet][#{guest.id}]", nil, placeholder: 'Dietary Restrictions', class: 'form-control' %>
                 </div>
               </div>
             <% end %>
