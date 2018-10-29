@@ -10,7 +10,7 @@
             <% @guests.each_with_index do |guest, i| %>
               <%= hidden_field_tag("guest[id][]", i)%>
               <div class="template-example">
-                <h2 class="template-title-example"><%= guest %></h2>
+                <h2 class="template-title-example"><%= guest.fullname %></h2>
                 <div class="form-group">
                   <%= radio_button_tag("guest[attendance][#{i}]", true, false, required: true)%>
                   <label> Attending</label>
