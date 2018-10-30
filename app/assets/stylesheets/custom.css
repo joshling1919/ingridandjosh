@@ -33,7 +33,11 @@
   margin-bottom: 30px;
 }
 
-.housing-info {
+.travel-info {
   width: 80%;
   margin: 0 auto;
+}
+
+.click-here {
+  text-decoration: underline;
 }
