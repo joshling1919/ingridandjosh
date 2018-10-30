@@ -1,11 +1,11 @@
 .logo {
-  width: 140px;
-  height: 70px;
+  width: 350px;
+  height: 175px;
 }
 
-.logo-mobile {
-  width: 90px;
-  height: 45px;
+.logo-container {
+  display: flex;
+  justify-content: center;
 }
 
 .search-error {
@@ -16,10 +16,6 @@
   cursor: pointer;
 }
 
-.home-header-container {
-  margin-bottom: 50px;
-}
-
-.home-header {
-  margin-bottom: 10px;
+.home-container {
+  text-align: justify;
 }
