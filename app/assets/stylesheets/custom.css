@@ -15,3 +15,11 @@
 .radio-label:hover {
   cursor: pointer;
 }
+
+.home-header-container {
+  margin-bottom: 50px;
+}
+
+.home-header {
+  margin-bottom: 10px;
+}
