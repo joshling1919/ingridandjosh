@@ -44,6 +44,12 @@
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  .travel-info {
+    width: 70%;
+  }
+}
+
 .housing-header {
   margin-top: 50px;
 }

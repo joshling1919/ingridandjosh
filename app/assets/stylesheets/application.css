@@ -15,7 +15,7 @@
  */
 
 /* prettier-ignore */
-@import url(https://fonts.googleapis.com/css?family=Cabin:400,700|Source+Sans+Pro:400,700);
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css); /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -279,7 +279,7 @@ html {
   -webkit-tap-highlight-color: transparent;
 }
 body {
-  font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 14px;
   line-height: 1.78;
   color: #555;
@@ -376,7 +376,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Cabin, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 700;
   line-height: 1.1;
   color: #000;
@@ -4907,7 +4907,7 @@ main {
 .site-brand,
 .site-brand {
   color: #000;
-  font-family: Cabin, Helvetica, Arial, sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   font-weight: 700;
   display: block;
@@ -4940,7 +4940,7 @@ a,
   margin-bottom: 30px;
 }
 .template-example .template-title-example {
-  font-family: Lato, Times, serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-weight: 400;
   color: #34495e;
   padding: 0;
