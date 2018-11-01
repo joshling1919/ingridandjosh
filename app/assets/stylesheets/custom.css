@@ -41,6 +41,11 @@
 .travel-info {
   width: 80%;
   margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.housing-header {
+  margin-top: 50px;
 }
 
 .click-here {
