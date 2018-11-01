@@ -20,10 +20,5 @@ namespace :import do
     end
     p 'Done importing!'
   end
-
-  task rsvp_csv: :environment do
-    Guest.update_csv!
-    p 'done importing!'
-  end
 end
  
