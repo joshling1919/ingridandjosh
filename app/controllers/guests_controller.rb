@@ -25,8 +25,10 @@ class GuestsController < ApplicationController
            .group
            .update!(notes: guest_params[:group_notes])
     end
+  end
 
-    Guest.update_csv!
+  def rsvp_csv
+    send_data Guest.to_csv!, filename: 'rsvp.csv'
   end
 
   private

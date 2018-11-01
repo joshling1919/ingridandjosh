@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :guests, only: [] do
     get :search, on: :collection
     post :rsvp, on: :collection
+    get :rsvp_csv, on: :collection
   end
 end
