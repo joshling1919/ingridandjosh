@@ -5,7 +5,7 @@ class Guest < ApplicationRecord
   def self.to_csv!
     CSV.generate(headers: true) do |csv|
       csv << ['group', 'name', 'attending', 'diet', 'group notes']
-      Guest.includes(:group).order(:attending, :group_id).each do |person|
+      Guest.includes(:group).order(updated_at: :desc).each do |person|
         csv << [person.group_id, person.fullname, person.attending, person.dietary_restrictions, person.group.notes]
       end
     end
