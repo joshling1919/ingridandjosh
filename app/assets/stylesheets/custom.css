@@ -93,3 +93,19 @@
 .gift-pic {
   margin-bottom: 20px;
 }
+
+.proposal {
+  width: 100%;
+  margin-top: 10px;
+  background: black;
+}
+
+@media (min-width: 768px) {
+  .proposal {
+    margin-top: 120px;
+  }
+}
+
+.story p {
+  padding-right: 10px;
+}
