@@ -102,15 +102,24 @@
 
 @media (min-width: 768px) {
   .proposal {
-    margin-top: 120px;
+    margin-top: 160px;
   }
 }
 
 .story p {
   margin-top: 20px;
   padding-right: 10px;
+  text-align: justify;
 }
 
-.story {
+.story h5 {
   text-align: center;
+}
+
+.story a {
+  color: blue;
+}
+
+.footnote {
+  font-size: 12px;
 }
