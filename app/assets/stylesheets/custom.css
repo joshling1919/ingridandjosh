@@ -107,5 +107,10 @@
 }
 
 .story p {
+  margin-top: 20px;
   padding-right: 10px;
+}
+
+.story {
+  text-align: center;
 }
