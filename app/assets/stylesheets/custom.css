@@ -123,3 +123,13 @@
 .footnote {
   font-size: 12px;
 }
+
+.photo-credit {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.photo-credit a {
+  color: #576155;
+  text-decoration: underline;
+}
